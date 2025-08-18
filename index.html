@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index - Perpustakaan Medayu Agung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&family=Lato:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <style>
+        :root {
+            --primary-color: #0F8EC8;
+            --secondary-color: #E6F3FA;
+            --dark-color: #343a40;
+            --light-color: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.3rem;
+            margin: 0;
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+
+        h1, h2, .cta-button {
+            font-family: 'Lato', sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Hero */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                        url('images/3.webp');
+            background-size: cover;
+            background-position: center;
+            height: 75vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 1rem;
+        }
+
+        .hero-content {
+            max-width: 90%;
+            padding: 0 1rem;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2rem, 8.5vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero-content span {
+            color: var(--primary-color);
+        }
+
+        .hero-content p {
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .brand-logo {
+            justify-content: center;
+        }
+
+        /* Tombol */
+        .cta-section {
+            padding: 3rem 0;
+            text-align: center;
+            background-color: var(--secondary-color);
+        }
+
+        .cta-section h2 {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            background-color: var(--primary-color);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .cta-button:hover {
+            background-color: #0c72a3;
+        }
+
+        .cta-button .material-symbols-outlined {
+            margin-right: 0.5rem;
+        }
+
+        /* Blok Informasi */
+        .info-section {
+            padding: 3rem 0;
+        }
+
+        .info-box {
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 2.5rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .info-box.reversed {
+            flex-direction: row-reverse;
+        }
+
+        .text-content {
+            flex: 1;
+        }
+
+        .info-box h2 {
+            font-size: clamp(1.6rem, 4vw, 2.2rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .info-box h2 span {
+            color: var(--primary-color);
+        }
+
+        .image-content {
+            flex-shrink: 0;
+            width: 100%;
+            max-width: 320px;
+            height: auto;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .image-content img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* galeri kunjungan */
+        .kunjungan-section {
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+        }
+
+        .image-gallery-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .main-image-container {
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #0F8EC8;
+        }
+
+        .main-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .thumbnail-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding-top: 10px;
+        }
+
+        .thumbnail {
+            width: 120px;
+            height: 90px;
+            cursor: pointer;
+            border-radius: 6px;
+            overflow: hidden;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .thumbnail:hover, .thumbnail.active {
+            border-color: #0F8EC8;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .info-box, .info-box.reversed {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .image-content {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .info-box {
+                padding: 1.5rem;
+            }
+
+            .image-content {
+                height: auto;
+            }
+
+            .main-image-container {
+                height: 250px;
+            }
+
+            .thumbnail {
+                width: 100px;
+                height: 75px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .hero-section {
+                height: 60vh;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .thumbnail-container {
+                gap: 8px;
+            }
+
+            .thumbnail {
+                width: 80px;
+                height: 60px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container hero-content">
+                <h1>Selamat Datang di<br><span>Perpustakaan Medayu Agung</span></h1>
+                <p>
+                    Perpustakaan Medayu Agung berupaya turut serta untuk mencerdaskan kehidupan bangsa. Kami menyediakan koleksi buku, surat kabar, majalah, dan foto-foto sejarah yang berharga.
+                </p>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Jelajahi Koleksi Kami</h2>
+                <div class="cta-buttons">
+                    <a href="katalog.ejs" class="cta-button">
+                        <span class="material-symbols-outlined">menu_book</span>
+                        Lihat Katalog
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <div class="container">
+                <div class="info-box">
+                    <div class="text-content">
+                        <h2>Sekilas Tentang Perpustakaan</h2>
+                        <p>
+                            Didirikan pada tahun 2009 oleh Yayasan Medayu Agung, Perpustakaan Medayu Agung bertujuan untuk melestarikan dan menyebarkan pengetahuan. Nama <b>Medayu Agung</b> sendiri memiliki makna kebajikan dan kebijaksanaan untuk tujuan yang besar.
+                        </p>
+                    </div>
+                    <div class="image-content">
+                        <img src="images/2.webp" alt="Gambar Gedung Depan Perpustakaan Medayu Agung di Surabaya">
+                    </div>
+                </div>
+
+                <div class="info-box reversed">
+                    <div class="text-content">
+                        <h2>Komunitas <span>Sahabat Medayu Agung</span></h2>
+                        <p>
+                            Komunitas ini merupakan wadah bagi para pemuda dan pemudi yang memiliki minat dalam bidang literasi dan digitalisasi perpustakaan. Mereka aktif dalam berbagai kegiatan untuk menjadikan perpustakaan dikenal dan diakses oleh masyarakat luas.
+                        </p>
+                    </div>
+                    <div class="image-content">
+                        <img src="images/1.webp" alt="Foto kegiatan Komunitas Sahabat Medayu Agung di dalam perpustakaan">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="kunjungan-section">
+            <div class="container">
+                <h2>Kunjungan</h2>
+                <div class="image-gallery-container">
+                    <div class="main-image-container">
+                        <img id="mainImage" src="images/kunjungan1.webp" alt="Kunjungan Basuki Tjahaja Purnama Dan Murdaya Poo">
+                    </div>
+                    <div class="thumbnail-container">
+                        <div class="thumbnail active">
+                            <img src="images/kunjungan1.webp" alt="Kunjungan Basuki Tjahaja Purnama Dan Murdaya Poo">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="images/kunjungan2.webp" alt="Kunjungan KonJend RRT">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="images/kunjungan3.webp" alt="Kunjungan Leo Suryadinata ">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="images/kunjungan4.webp" alt="Kunjungan Bennedict Anderson">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="images/kunjungan5.webp" alt="Kunjungan Hilmar Faried">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mainImage = document.getElementById('mainImage');
+            const thumbnails = document.querySelectorAll('.thumbnail');
+
+            // menambahkan event listener ke setiap thumbnail
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', function() {
+                    // hapus kelas 'active' dari semua thumbnail
+                    thumbnails.forEach(t => t.classList.remove('active'));
+
+                    // tambahkan kelas 'active' ke thumbnail yang diklik
+                    this.classList.add('active');
+
+                    // ganti gambar utama dan deskripsinya
+                    const newSrc = this.querySelector('img').src;
+                    const newAlt = this.querySelector('img').alt;
+                    mainImage.src = newSrc;
+                    mainImage.alt = newAlt;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
