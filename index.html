@@ -36,7 +36,7 @@
             padding: 0 1.5rem;
         }
 
-        /* Hero */
+        /* hero */
         .hero-section {
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
                         url('images/3.webp');
@@ -78,7 +78,7 @@
             justify-content: center;
         }
 
-        /* Tombol */
+        /* tombol */
         .cta-section {
             padding: 3rem 0;
             text-align: center;
@@ -121,7 +121,7 @@
             margin-right: 0.5rem;
         }
 
-        /* Blok Informasi */
+        /* blok informasi */
         .info-section {
             padding: 3rem 0;
         }
@@ -229,7 +229,7 @@
             transform: translateY(-2px);
         }
 
-        /* Responsive */
+        /* responsive */
         @media (max-width: 992px) {
             .info-box, .info-box.reversed {
                 flex-direction: column;
@@ -283,6 +283,14 @@
                 height: 60px;
             }
         }
+        .copyright {
+            width: 100%;
+            text-align: center;
+            padding: 20px 0 10px;
+            font-size: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin-top: 40px;
+        }
     </style>
 </head>
 
@@ -318,23 +326,23 @@
                     <div class="text-content">
                         <h2>Sekilas Tentang Perpustakaan</h2>
                         <p>
-                            Didirikan pada tahun 2009 oleh Yayasan Medayu Agung, Perpustakaan Medayu Agung bertujuan untuk melestarikan dan menyebarkan pengetahuan. Nama <b>Medayu Agung</b> sendiri memiliki makna kebajikan dan kebijaksanaan untuk tujuan yang besar.
+                            Didirikan pada tahun 2001 oleh Yayasan Medayu Agung, Perpustakaan Medayu Agung bertujuan untuk melestarikan dan menyebarkan ilmu pengetahuan. Nama <b>Medayu Agung</b> sendiri memiliki makna kebajikan dan kebijaksanaan untuk tujuan yang besar.
                         </p>
                     </div>
                     <div class="image-content">
-                        <img src="images/2.webp" alt="Gambar Gedung Depan Perpustakaan Medayu Agung di Surabaya">
+                        <img src="images/1.webp" alt="Gambar Gedung Depan Perpustakaan Medayu Agung di Surabaya">
                     </div>
                 </div>
 
                 <div class="info-box reversed">
                     <div class="text-content">
-                        <h2>Komunitas <span>Sahabat Medayu Agung</span></h2>
+                        <h2>Komunitas Sahabat Medayu Agung</h2>
                         <p>
-                            Komunitas ini merupakan wadah bagi para pemuda dan pemudi yang memiliki minat dalam bidang literasi dan digitalisasi perpustakaan. Mereka aktif dalam berbagai kegiatan untuk menjadikan perpustakaan dikenal dan diakses oleh masyarakat luas.
+                            Komunitas ini merupakan wadah bagi para pemuda dan pemudi yang memiliki minat dalam bidang literasi dan digitalisasi perpustakaan. Mereka aktif dalam berbagai kegiatan untuk menjadikan perpustakaan dapat dikenal dan diakses oleh masyarakat luas.
                         </p>
                     </div>
                     <div class="image-content">
-                        <img src="images/1.webp" alt="Foto kegiatan Komunitas Sahabat Medayu Agung di dalam perpustakaan">
+                        <img src="images/sahabat_medayu.webp" alt="Foto Anggota Komunitas Sahabat Medayu Agung">
                     </div>
                 </div>
             </div>
@@ -368,9 +376,11 @@
             </div>
         </section>
     </main>
-
     <footer>
-        </footer>
+        <div class="copyright">
+            Copyright © Perpustakaan Medayu Agung 2025
+        </div>
+    </footer>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const mainImage = document.getElementById('mainImage');
